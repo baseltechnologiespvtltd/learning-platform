@@ -1,0 +1,16 @@
+name: CI/CD Pipeline
+on: 
+  push:
+    branches:
+      - main # Trigger Pipeline when code is pushed to main branch
+ jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps: 
+      - name: Checkout Code
+        uses:
+actions/checkout@v3
+    - name: Run Tests
+    run: echo "Running tests..." # Replace with your test commands
+        - name: Deploy
+          run: echo "Deploying application..."  # Replace with deployment commands
