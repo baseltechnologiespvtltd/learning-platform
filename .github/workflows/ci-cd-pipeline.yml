@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 on: 
   push:
     branches:
-      - main # Trigger Pipeline when code is pushed to main branch
+      - main  # Trigger Pipeline when code is pushed to main branch
  jobs:
    build:
       runs-on: ubuntu-latest
