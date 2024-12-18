@@ -1,6 +1,7 @@
 import React from "react";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 
 const StudentQuizes = () => {
   const quizData = [
@@ -47,7 +48,19 @@ const StudentQuizes = () => {
         height: "auto",
       }}
     >
-      <h4 className="mb-4">My Quiz Attempts</h4>
+      <div className="d-flex justify-content-between align-items-center shadow p-3 mb-4 bg-light rounded">
+        <div>
+          <h4 className="text-primary">My Quiz Attempts</h4>
+        </div>
+        <div className="d-flex justify-content-end">
+          <Link to="/student">
+            <button className="btn btn-outline-primary d-flex align-items-center gap-2">
+              <AiOutlineArrowLeft />
+              Back
+            </button>
+          </Link>
+        </div>
+      </div>
       <table className="table table-striped table-hover">
         <thead className="table-primary">
           <tr>

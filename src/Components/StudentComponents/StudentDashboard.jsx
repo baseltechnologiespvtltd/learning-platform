@@ -1,32 +1,103 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const StudentDashboard = () => {
-  const features = [
-    { title: "My Profile", icon: "bi-person-circle", link: "/profile" },
-    { title: "My Courses", icon: "bi-journal-bookmark", link: "/courses" },
-    { title: "My Wishlist", icon: "bi-heart", link: "/wishlist" },
-    { title: "My Reviews", icon: "bi-star", link: "/reviews" },
-    { title: "My Quizzes", icon: "bi-question-circle", link: "/quizzes" },
-    { title: "Order History", icon: "bi-clock-history", link: "/orderhistory" },
-  ];
-
   return (
-    <div className="container py-4">
-      <h1 className="mt-24">Student Dashboard</h1>
-      <div className="row g-4 ">
-        {features.map((feature, index) => (
-          <div key={index} className="col-md-4">
-            <div className="card h-100 shadow-sm">
-              <div className="card-body text-center">
-                <i className={`bi ${feature.icon} display-4 mb-3`}></i>
-                <h5 className="card-title">{feature.title}</h5>
-                <a href={feature.link} className="btn btn-primary mt-3">
-                  Go to {feature.title}
+    <div
+      className="bg-light"
+      style={{
+        marginLeft: "20%",
+        padding: "20px",
+        paddingTop: "76px",
+        height: "auto",
+      }}
+    >
+      <h1>Dashboard</h1>
+      <div className="row mb-2">
+        <div className="col-sm-6 mb-3 mb-sm-0">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">My Profile</h5>
+              <p className="card-text">
+                View and update your personal information, contact details, and
+                account preferences.
+              </p>
+              <Link to="/student/profile">
+                <a href="#" className="btn btn-primary">
+                  View My Profile
                 </a>
-              </div>
+              </Link>
             </div>
           </div>
-        ))}
+        </div>
+        <div className="col-sm-6">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">My Learning</h5>
+              <p className="card-text">
+                Access all the courses you are enrolled in, track your progress,
+                and explore additional learning resources.
+              </p>
+              <Link to="/student/courses">
+                <a href="#" className="btn btn-primary">
+                  View My Learnings
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row mb-2">
+        <div className="col-sm-6 mb-3 mb-sm-0">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">My Wishlist</h5>
+              <p className="card-text">
+                Keep track of the courses, resources, or items you'd like to
+                explore later.
+              </p>
+              <Link to="/student/wishlist">
+                <a href="#" className="btn btn-primary">
+                  View My Wishlist
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-6">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">My Quizzes</h5>
+              <p className="card-text">
+                Access all the quizzes you have taken, view your results, and
+                track your performance.
+              </p>
+              <Link to="/student/quize">
+                <a href="#" className="btn btn-primary">
+                  View My Quizzes
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row mb-2">
+        <div className="col-sm-6 mb-3 mb-sm-0">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">My Order History</h5>
+              <p className="card-text">
+                Review your previous orders, including course purchases and
+                other learning materials.
+              </p>
+              <Link to="/student/history">
+                <a href="#" className="btn btn-primary">
+                  View My History
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

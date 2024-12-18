@@ -1,5 +1,7 @@
 import React from "react";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const StudentWishlist = () => {
   const courses = [
@@ -106,8 +108,18 @@ const StudentWishlist = () => {
         height: "auto",
       }}
     >
-      <div className="d-flex gap-5">
-        <h4>My Wishlist</h4>
+      <div className="d-flex justify-content-between align-items-center shadow p-3 mb-4 bg-light rounded">
+        <div>
+          <h4 className="text-primary">My Wishlist</h4>
+        </div>
+        <div className="d-flex justify-content-end">
+          <Link to="/student">
+            <button className="btn btn-outline-primary d-flex align-items-center gap-2">
+              <AiOutlineArrowLeft />
+              Back
+            </button>
+          </Link>
+        </div>
       </div>
       <div
         style={{

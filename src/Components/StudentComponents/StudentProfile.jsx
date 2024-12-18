@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const StudentProfile = () => {
   const profileData = {
@@ -19,12 +21,19 @@ const StudentProfile = () => {
       <h4>my profile</h4>
       <div className="row" style={{ marginLeft: "250px", padding: "30px" }}>
         <div className="col-12">
-          <h4
-            className="mb-4"
-            style={{ fontSize: "1.5rem", fontWeight: "bold" }}
-          >
-            My Profile
-          </h4>
+          <div className="d-flex justify-content-between align-items-center shadow p-3 mb-4 bg-light rounded">
+            <div>
+              <h4 className="text-primary">My Profile</h4>
+            </div>
+            <div className="d-flex justify-content-end">
+              <Link to="/student">
+                <button className="btn btn-outline-primary d-flex align-items-center gap-2">
+                  <AiOutlineArrowLeft />
+                  Back
+                </button>
+              </Link>
+            </div>
+          </div>
           <div className="card shadow-lg rounded-3">
             <div className="card-body">
               <div className="row">

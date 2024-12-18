@@ -6,7 +6,6 @@ import StudentDashboard from "./Components/StudentComponents/StudentDashboard";
 import StudentProfile from "./Components/StudentComponents/StudentProfile";
 import StudentCourses from "./Components/StudentComponents/StudentCourses";
 import StudentWishlist from "./Components/StudentComponents/StudentWishlist";
-import StudentReview from "./Components/StudentComponents/StudentReview";
 import StudentHistory from "./Components/StudentComponents/StudentHistory";
 import StudentQuizes from "./Components/StudentComponents/StudentQuizes";
 import TutorLayout from "./moduleLayouts/TutorLayout";
@@ -18,6 +17,11 @@ import TutorAssignments from "./Components/TutorComponents/TutorAssignments";
 import TutorQuiz from "./Components/TutorComponents/TutorQuiz";
 import TutorReview from "./Components/TutorComponents/TutorReview";
 import TutorCourses from "./Components/TutorComponents/TutorCourses";
+import AdminLayout from "./moduleLayouts/AdminLayout";
+import AdminDashboard from "./Components/AdminComponents/AdminDashboard";
+import AdminProfile from "./Components/AdminComponents/AdminProfile";
+import AdminMails from "./Components/AdminComponents/AdminMails";
+import AdminCalender from "./Components/AdminComponents/AdminCalender";
 
 const App = () => {
   return (
@@ -29,7 +33,6 @@ const App = () => {
           <Route path="profile" element={<StudentProfile />} />
           <Route path="courses" element={<StudentCourses />} />
           <Route path="wishlist" element={<StudentWishlist />} />
-          <Route path="review" element={<StudentReview />} />
           <Route path="history" element={<StudentHistory />} />
           <Route path="quize" element={<StudentQuizes />} />
         </Route>
@@ -44,6 +47,14 @@ const App = () => {
           <Route path="quiz" element={<TutorQuiz />} />
           <Route path="review" element={<TutorReview />} />
           <Route path="courses" element={<TutorCourses />} />
+        </Route>
+
+        {/* Admin routes*/}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="profile" element={<AdminProfile />} />
+          <Route path="mail" element={<AdminMails />} />
+          <Route path="calender" element={<AdminCalender />} />
         </Route>
       </Routes>
     </BrowserRouter>
