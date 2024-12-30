@@ -33,7 +33,6 @@ const SendOtp = () => {
       const response = await axios.post('http://127.0.0.1:3001/api/verify-otp', { email, otp });
       setMessage(response.data.message);
       navigate('/home');
-      alert("login Success");
       // Redirect on successful verification
     } catch (error) {
       setMessage(error.response?.data?.error || "Error verifying OTP");
